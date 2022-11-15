@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>course reservation</title>
+<style>
+body
+{
+	background-color: pink;
+	width:100vw;
+	height:100vh; 
+}
+.form
+{	 border: 3px solid #f1f1f1; 
+	align:center;
+	width: 50%;
+	margin: 0 auto;
+	border-radius: 30px;
+	background-color: white;
+	padding: 25px;    
+	border-radius: 30px;
+}
+input,select{   
+        width: 100%;   
+        margin: 8px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px solid green;   
+        box-sizing: border-box;   
+    }  
+</style>
+</head>
+<body>
+<div class="form">
+      
+   
+          
+          <form action="reserve.php" method="post">
+          
+          <div class="top-row">
+            <div class="field-wrap">
+              <label>
+                First Name:
+              </label>
+              <input type="text" required autocomplete="off" name="fname" id="fname"/>
+            </div>
+        
+            <div class="field-wrap">
+              <label>
+                Last Name:<span class="req">*</span>
+              </label>
+              <input type="text" name="lname" id="lname" required autocomplete="off"/>
+            </div>
+          </div>
+		  
+		  <div class="field-wrap">
+			<label>
+              Gender:
+            </label>
+            <input id="gender" list="gend" name="gender">
+					<datalist id="gend">
+					<option value="m">Male</option>
+					<option value="f">Female</option>
+					</datalist>
+		  </div>
+			
+			<div class="field-wrap">
+			
+         
+		<lable>Cousre</lable>
+		<select name="course" id="course">
+					<option value="none">none</option>
+					<option value="C">C-programming</option>
+					<option value="JAVA">JAVA-programming</option>
+					<option value="html_css">HTML and CSS</option>
+					<option value="python">python</option>
+					<option value="javascript">javascript</option>
+					<option value="Mysql">MySql</option>
+					
+	</div><br><br>
+	
+<div class="field-wrap">
+		<lable>Department</lable>
+            <input id="department" list="departments" required autocomplete="off" name="department">
+					<datalist id="departments">
+					<option value="All">All Departments</option>
+					<option value="CS">CS-Computer Science</option>
+					<option value="CE">CE-Computer Engineering</option>
+					<option value="ACCI">ACCI-Accounting</option>
+					<option value="AHSI">AHSI-Art History</option>
+					<option value="BIOL">BIOL-Biology</option>
+					<option value="BUAN">BUAN-Business Analytics</option>
+					<option value="ITM">ITM-IT Management</option>
+					</datalist>
+		  </div>
+			
+	<div class="field-wrap">
+              <label>
+               Contact Number:<span class="req">*</span>
+              </label>
+              <input type="text" name="contact" id="contact" required autocomplete="off"/>
+            </div>
+
+
+
+          <div class="field-wrap">
+            <label>
+              Email Address:<span class="req">*</span>
+            </label>
+            <input type="email"required autocomplete="off" name="email" id="email"/>
+          </div>
+
+
+		<div class="field-wrap">
+           
+          
+          <button type="submit" id = "button" class="button button-block"/>Reserve</button>
+          
+          </form>
+
+        </div>
+</body>
+</html>
